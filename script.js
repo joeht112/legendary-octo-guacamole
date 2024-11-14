@@ -43,5 +43,51 @@ const questions = [
             {text: "Debbie Harry", correct: false},
             {text: "Emma Bunton", correct: false},
         ]
-    }
+    },
+    {
+        question: "Which of these are NOT a song by Green Day?",
+        answers: [
+            {text: "When I Come Around", correct: false},
+            {text: "American Idiot", correct: false},
+            {text: "All The Small Things", correct: true},
+            {text: "Holiday", correct: false},
+        ]
+    },
+    {
+        question: "What year did Elvis Presley die?",
+        answers: [
+            {text: "1975", correct: false},
+            {text: "1977", correct: true},
+            {text: "1979", correct: false},
+            {text: "1981", correct: false},
+        ]
+    },
+    {
+        question: "In which country was Pitbull born?",
+        answers: [
+            {text: "Cuba", correct: false},
+            {text: "Colombia", correct: false},
+            {text: "Venezuela", correct: false},
+            {text: "United States", correct: true},
+        ]
+    },
+    {
+        question: "Which of these songs was Outkast's first hit?",
+        answers: [
+            {text: "Player's Ball", correct: true},
+            {text: "So Fresh, So Clean", correct: false},
+            {text: "Ms Jackson", correct: false},
+            {text: "Hey Ya!", correct: false},
+        ]
+    },
+    {
+        question: "Which song is playing in the background of the famous Cadbury's advert featuring a Gorilla playing a drum solo?",
+        answers: [
+            {text: "I Don't Want to Miss a Thing - Aerosmith", correct: false},
+            {text: "Livin' on a Prayer - Bon Jovi", correct: false},
+            {text: "In The Air Tonight - Phil Collins", correct: true},
+            {text: "Paranoid - Black Sabbath", correct: false},
+        ]
+    },
+    
 ]

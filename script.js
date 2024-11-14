@@ -138,7 +138,7 @@ const questions = [
 ];
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-button");
+const nextButton = document.getElementById("next-question");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -165,7 +165,7 @@ function showQuestion(){
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
-    })
+    });
 }
 
 function resetState(){
@@ -188,7 +188,7 @@ function selectAnswer(e){
         if (button.dataset.correct === "true"){
             button.classList.add("correct");
         }
-        buttton.disabled = true;
+        button.disabled = true;
     });
     nextButton.style.display = "block";
 }
@@ -213,7 +213,7 @@ function handleNextButton(){
 function showScore(){
     resetState();
     questionElement.innerHTML = `You got ${score} out of ${questions.length} right. Congrats!`;
-    nextButton.innerHTML = "Play Again?"
+    nextButton.innerHTML = "Play Again?";
     nextButton.style.display = "block";
 }
 

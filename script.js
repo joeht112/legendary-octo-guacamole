@@ -89,5 +89,50 @@ const questions = [
             {text: "Paranoid - Black Sabbath", correct: false},
         ]
     },
-    
-]
+    {
+        question: "Which song by Lady Gaga wasn't originally broadcast on certain radio stations due to the Radio Edit not actually being clean?",
+        answers: [
+            {text: "Poker Face", correct: true},
+            {text: "Bad Romance", correct: false},
+            {text: "Bloody Mary", correct: false},
+            {text: "Telephone", correct: false},
+        ]
+    },
+    {
+        question: "How many studio albums have been released by the band Fall Out Boy?",
+        answers: [
+            {text: "5", correct: false},
+            {text: "6", correct: false},
+            {text: "7", correct: false},
+            {text: "8", correct: true},
+        ]
+    },
+    {
+        question: "Which of these is not an album by Adele?",
+        answers: [
+            {text: "19", correct: false},
+            {text: "22", correct: true},
+            {text: "25", correct: false},
+            {text: "30", correct: false},
+        ]
+    },
+    {
+        question: "Which of these Katy Perry singles did NOT reach number 1 on the UK charts?",
+        answers: [
+            {text: "Firework", correct: true},
+            {text: "I Kissed A Girl", correct: false},
+            {text: "California Gurls", correct: false},
+            {text: "Part of Me", correct: false},
+        ]
+    },
+    {
+        question: "What is the best selling Christmas song of all time?",
+        answers: [
+            {text: "Last Christmas - Wham!", correct: false},
+            {text: "All I Want For Christmas is You - Mariah Carey", correct: false},
+            {text: "White Christmas - Bing Crosby", correct: true},
+            {text: "The Fairytale of New York - The Pogues & Kirsty MacColl", correct: false},
+        ]
+    }
+
+];

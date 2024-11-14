@@ -51,9 +51,12 @@ body, html {
     border-radius: 5px;
     transition: all 0.3s;
 }
-.option:hover{
+.option:hover:not([disabled]){
     background-color: #e65cb5;
-    color: #fff;
+    color: #ffffff;
+}
+.option:disabled {
+    cursor: no-drop;
 }
 #next-question {
     font-weight: 500;
@@ -67,4 +70,10 @@ body, html {
 }
 #next-question:hover {
     background-color: #33c8fa;
+}
+.correct {
+    background-color: #00ff00;
+}
+.incorrect {
+    background-color: #ff6347;
 }

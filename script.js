@@ -136,3 +136,85 @@ const questions = [
     }
 
 ];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-button");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function letsPlay(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNum = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("option");
+        answerButtons.appendChild(button);
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    })
+}
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedButton = e.target;
+    const isCorrect = selectedButton.dataset.correct === "true";
+    if (isCorrect){
+        selectedButton.classList.add("correct");
+        score++;
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button => {
+        if (button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        buttton.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    } else {
+        letsPlay();
+    }
+});
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length){
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You got ${score} out of ${questions.length} right. Congrats!`;
+    nextButton.innerHTML = "Play Again?"
+    nextButton.style.display = "block";
+}
+
+letsPlay();

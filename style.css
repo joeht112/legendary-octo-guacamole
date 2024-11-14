@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+}
+.backdrop {
+    background-image: url(pinkblackbackdrop.jpg);
+    height: 100%;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.window {
+    background-color: #f1a7d7;
+    width: 85%;
+    max-width: 626px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}

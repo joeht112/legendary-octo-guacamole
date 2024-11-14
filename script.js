@@ -217,4 +217,10 @@ function showScore(){
     nextButton.style.display = "block";
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        window.location.href = '/'; // Redirect to the home page
+    }
+});
+
 letsPlay();
